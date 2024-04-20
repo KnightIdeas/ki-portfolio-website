@@ -8,7 +8,7 @@ function Hero({ title, subtitle, imgUrl, imgAlt }) {
                 <h2>{title}</h2>
                 <h3>{subtitle}</h3>
             </div>
-            <div>
+            <div className="hero-image">
                 <img src={imgUrl} alt={imgAlt} />
             </div>
         </section>
