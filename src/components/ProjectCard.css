@@ -1,0 +1,38 @@
+/* src/components/ProjectCard.css */
+.project {
+    width: 280px;  /* Default width of each card */
+    margin: 10px;  /* Margin around each card for spacing */
+    flex: 1 1 280px; /* Flexibility settings: grow, shrink, and base width */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-details {
+    padding: 16px;
+    text-align: left;
+}
+
+@media (max-width: 1024px) {
+    .project {
+        max-width: calc(50% - 40px); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        max-width: 100%; /* One item per row on small screens */
+    }
+}

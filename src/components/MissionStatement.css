@@ -1,0 +1,15 @@
+/* src/components/MissionStatement.css */
+.mission-statement {
+    padding: 20px;
+    text-align: center;
+    background: #ffffff; /* Choose a background color that fits your design */
+  }
+  
+  .mission-statement h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem; /* Example size, adjust as needed */
+  }
+  
+  .mission-statement p {
+    font-size: 1.25rem; /* Example size, adjust as needed */
+  }

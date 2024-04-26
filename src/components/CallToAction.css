@@ -1,0 +1,33 @@
+/* CallToAction.css */
+.call-to-action {
+    text-align: center;
+    padding: 40px 20px;
+    background: #123456;  /* A dark background color for contrast */
+    color: white;
+  }
+  
+  .call-to-action h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .call-to-action p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+  
+  .call-to-action button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #123456;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .call-to-action button:hover {
+    background-color: #eeeeee;
+  }
+  

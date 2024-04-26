@@ -1,38 +1,95 @@
 /* src/components/Hero.css */
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #000; /* Example background color */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000; /* Example background color */
+}
+
+.hero-content {
+  flex: 1; /* Allows the content to grow */
+  color: white; /* Set text color for all child text elements */
+  margin: 100px 200px;
+  padding: 200px 100px;
+}
+
+.hero-image {
+  flex: 2; /* Image takes up twice the space of the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  height: 500px; /* Fixed height for large screens */
+  border-radius: 50%; /* Fully rounded image */
+  width: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-content {
+    margin: 50px 60px;
+    padding: 60px 50px;
   }
 
-  
-  .hero-content h2,
-  .hero-content h3 {
-    color: white;
-  }
-  
   .hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column; /* Stack children vertically */
+    padding: 20px; /* Reduce padding on smaller screens */
+    align-items: center; /* Align children centrally */
+    text-align: center; /* Center text alignment */
   }
 
-  @media only screen and (max-width: 600px) {
-    .hero-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .hero-content {
-      margin-bottom: 20px; /* Add some space between the text and the image */
-    }
-  
-    .hero-image img {
-      width: 80%; /* Scale down the image on smaller screens */
-      height: auto;
-      margin: 0 auto; /* Center the image */
-    }
+  .hero-content {
+    order: 1; /* Optionally change order if you want text below image */
+    margin: 40px 10px;
+    padding: 10px 0px 40px 0;
   }
+
+  .hero-image {
+    order: 1; /* Image comes first */
+    flex: none; /* Override any previous flex settings */
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto; /* Adjust height automatically */
+    border-radius: 20%; /* Less rounded corners on small screens */
+    margin-top: 20px;
+    padding: 20px; /* Remove padding */
+  }
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column; /* Stack children vertically */
+    padding: 20px; /* Reduce padding on smaller screens */
+    align-items: center; /* Align children centrally */
+    text-align: center; /* Center text alignment */
+  }
+
+  .hero-content {
+    order: 2; /* Optionally change order if you want text below image */
+    margin-bottom: 20px; /* Space between text and image */
+  }
+
+  .hero-image {
+    order: 1; /* Image comes first */
+    flex: none; /* Override any previous flex settings */
+  }
+
+  .hero-image img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height automatically */
+    border-radius: 20%; /* Less rounded corners on small screens */
+    padding: 0; /* Remove padding */
+  }
+}

@@ -1,0 +1,35 @@
+/* src/components/Projects.css */
+.projects-page {
+    padding: 4rem;
+    text-align: center;
+    background-color: #f4f4f8; /* Light background to keep it airy and modern */
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centering cards within the container */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px; /* Adds padding around the container */
+}
+
+h1 {
+    color: #333;
+    font-size: 3rem;
+    margin-bottom: 2rem; /* Space below the header */
+}
+
+@media (min-width: 768px) {
+    .projects-page {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-page {
+        padding: 1rem;
+    }
+    .projects-container {
+        justify-content: space-around; /* Adjust alignment for smaller screens */
+    }
+}

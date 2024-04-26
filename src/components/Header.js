@@ -1,20 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Header.css';
+import './Header.css'; // Ensure this is linked properly
 
-function Header () {
+function Header() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     return (
         <header className='header'>
             <div className='logo'>
                 <Link to='/'>Knight Ideas</Link>
             </div>
-            <nav className='navigation'>
-                <ul>
-                    <li><Link to='/'>Home</Link> </li>
-                    <li><Link to='/projects'>Projects</Link> </li>
-                    <li><Link to='/contact'>Contact</Link> </li>
-                </ul>
+            <button className="hamburger" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                ☰
+            </button>
+            
+            {/* Desktop Navigation */}
+            <nav className='desktop-nav'>
+                <Link to='/' className='nav-link'>Home</Link>
+                <Link to='/projects' className='nav-link'>Projects</Link>
+                <Link to='/contact' className='nav-link'>Contact</Link>
+                <Link to='/contact' className='cta-button'>Let's Collaborate</Link>
             </nav>
+
+            {/* Mobile Navigation */}
+            {isMobileMenuOpen && (
+                <nav className='mobile-nav'>
+                    <Link to='/' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
+                    <Link to='/projects' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
+                    <Link to='/contact' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
+                    <Link to='/contact' className='cta-button' onClick={() => setIsMobileMenuOpen(false)}>Let's Collaborate</Link>
+                </nav>
+            )}
         </header>
     );
 }
