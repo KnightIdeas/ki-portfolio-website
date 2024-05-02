@@ -1,41 +1,60 @@
 import React from 'react'
 import ProjectCard from './ProjectCard';
-import './ProjectCard.css';
+import './Projects.css';
+import image1 from '../assets/images/DOTD-g-project-image.png';
+import image2 from '../assets/images/Tountra-g-project-image.png';
+
+const GAMES = 'Games';
+const APPS = 'Apps';
+const AI_APPS = 'AI Apps';
+
+const projects = [
+  {
+    title: 'Draught of The Dungeon',
+    description: '"Apprentice, find thy master!" A potion throwing dungeon crawler/puzzle game',
+    technologies: ['Unity', 'Blender', 'Krita', 'Git', 'Materialize'],
+    image: image1,
+    type: GAMES
+  },
+  {
+    title: 'Tountra - Cold Steel Vengence',
+    description: 'MechJam IV entry Tountra, play as a brave freedom fighter on a frozen planet, featuring fully destructable buildings a weapon upgrade system and full 3D combat',
+    technologies: ['Unity', 'Blender', 'Krita', 'Git'],
+    image: image2,
+    type: GAMES
+  },
+  {
+    title: 'Movie App',
+    description: 'Using the publicly available X API to find and present all your favourite movies',
+    technologies: ['React', 'Node.js', 'Git'],
+    image: image2,
+    type: APPS
+  },
+  
+]
 
 const Projects = () => {
-  const projects = [{
-    title: 'AI Chatbot',
-    description: "A sophisticated AI chatbot that handles customer inquiries.",
-    technologies: ['React', 'AI', 'Node.js'],
-    image: "http://via.placeholder.com/400"
-  },
-  {
-    title: 'E-commerce Dashboard',
-    description: "Dashboard for e-commerce metrics visualization.",
-    technologies: ["React", "D3.js", "Firebase"],
-    image: "http://via.placeholder.com/400"
-  },
-  {
-    title: 'E-commerce Dashboard',
-    description: "Dashboard for e-commerce metrics visualization.",
-    technologies: ["React", "D3.js", "Firebase"],
-    image: "http://via.placeholder.com/400"
-  },
-  {
-    title: 'E-commerce Dashboard',
-    description: "Dashboard for e-commerce metrics visualization.",
-    technologies: ["React", "D3.js", "Firebase"],
-    image: "http://via.placeholder.com/400"
-  }
-  // Add more projects
-]
+  const projectTypes = [GAMES, APPS, AI_APPS];
+
+  const categorizedProjects = projectTypes.map(type => ({
+    type,
+    items: projects.filter(project => project.type === type)
+  }));
+
+  // Add more types as needed
+
   return (
     <div className='projects-page'>
-      <h1 className='projects-container'>Projects</h1>
-      <div className='projects-container'>
-        {projects.map((project, index) => (<ProjectCard key={index} project={project} />
+      {categorizedProjects.map((category, index) => (
+        <div key={index} className='project-category'>
+          <h2>{category.type}</h2>
+          <div className='projects-container'>
+            {category.items.map((project, idx) => (
+              <ProjectCard key={idx} project={project} />
+            ))}
+          </div>
+        </div>
       ))}
-      </div>
     </div>
   );
 };

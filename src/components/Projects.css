@@ -1,25 +1,30 @@
 /* src/components/Projects.css */
-.projects-page {
+
+ .projects-page {
     padding: 4rem;
-    text-align: center;
-    background-color: #f4f4f8; /* Light background to keep it airy and modern */
+    background-color: #f4f4f8; 
+}
+
+.project-category {
+    margin-bottom: 2rem;  /* Space between categories */
 }
 
 .projects-container {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center; /* Centering cards within the container */
-    gap: 20px; /* Spacing between cards */
-    padding: 20px; /* Adds padding around the container */
+    justify-content: center;
+    align-items: flex-start;
 }
 
-h1 {
+.project-category h2 {
+    text-align: center;
     color: #333;
-    font-size: 3rem;
-    margin-bottom: 2rem; /* Space below the header */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
-@media (min-width: 768px) {
+ @media (min-width: 768px) {
     .projects-page {
         padding: 2rem;
     }
@@ -30,6 +35,7 @@ h1 {
         padding: 1rem;
     }
     .projects-container {
-        justify-content: space-around; /* Adjust alignment for smaller screens */
+        justify-content: space-around;
     }
 }
+
