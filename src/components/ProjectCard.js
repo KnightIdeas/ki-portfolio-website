@@ -1,9 +1,9 @@
 import React from 'react'
 import './ProjectCard.css'
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, onClick }) => {
     return (
-        <div className='project'>
+        <div className='project' onClick={onClick}>
             <div className='project-image'>
                 <img src={project.image !== 'N/A' ? project.image : 'http://via.placeholder.com/400'} alt={project.title} />
             </div>

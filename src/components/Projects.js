@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ProjectCard from './ProjectCard';
+import Modal from './Modal';
 import './Projects.css';
 import image1 from '../assets/images/DOTD-g-project-image.png';
 import image2 from '../assets/images/Tountra-g-project-image.png';
+import image3 from '../assets/images/KnightMovies-app-image.png';
+import imageTemp from '../assets/images/ComingSoon-project-image.png';
 
 const GAMES = 'Games';
 const APPS = 'Apps';
@@ -27,13 +30,45 @@ const projects = [
     title: 'Movie App',
     description: 'Using the publicly available X API to find and present all your favourite movies',
     technologies: ['React', 'Node.js', 'Git'],
-    image: image2,
+    image: image3,
     type: APPS
   },
-  
+  {
+    title: 'Coming Soon App Project #3',
+    description: 'A new project',
+    technologies: ['?'],
+    image: imageTemp,
+    type: APPS
+  },
+  {
+    title: 'Coming Soon AI Project #1',
+    description: 'A new project',
+    technologies: ['?'],
+    image: imageTemp,
+    type: AI_APPS
+  },
+  {
+    title: 'Coming Soon AI Project #2',
+    description: 'A new project',
+    technologies: ['?'],
+    image: imageTemp,
+    type: AI_APPS
+  },
 ]
 
 const Projects = () => {
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
+
+  const handleProjectClick = project => {
+    setCurrentProject(project);
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
+
   const projectTypes = [GAMES, APPS, AI_APPS];
 
   const categorizedProjects = projectTypes.map(type => ({
@@ -50,11 +85,12 @@ const Projects = () => {
           <h2>{category.type}</h2>
           <div className='projects-container'>
             {category.items.map((project, idx) => (
-              <ProjectCard key={idx} project={project} />
+              <ProjectCard key={idx} project={project} onClick={() => handleProjectClick(project)} />
             ))}
           </div>
         </div>
       ))}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} project={currentProject} />
     </div>
   );
 };
