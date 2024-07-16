@@ -5,10 +5,10 @@ function MissionStatement () {
     return (
         <section className='mission-statement'>
         <h2>
-        My Mission    
+        How I can help
         </h2>
         <p>
-       To elevate your digital experience with our seamless AI intergrations for user-friendly web applications. Upgrading your business with cutting-edge technology.
+        I can help you and your team acheive desirable results quickly and seamlessly.
         </p>
         </section>
     );
