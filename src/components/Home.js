@@ -4,16 +4,20 @@ import logo from '../assets/images/Logo V1.png';
 import MissionStatement from './MissionStatement';
 import Services from './Services';
 import CallToAction from './CallToAction';
+import ProjectOverview from './ProjectOverview';
 
 function Home() {
   return (
     <main>
         <Hero 
-        title='Upgrade Your Business with Cutting-Edge AI'
-        subtitle='Leveraging the power of AI to revolutionize your web applications and streamline your processes.'
+        titleA='<Web Developer>'
+        subtitleA='Using JavaScript, CSS, HTML, React and Next.js to build dynamic web experiences.'
         imgUrl={logo}
         imgAlt={''}
+        titleB='Game Developer'
+        subtitleB='Building exciting, fun experiences in Unity and Unreal'
         />
+        <ProjectOverview />
         {/* Additional content */}
         <MissionStatement />
         <Services />

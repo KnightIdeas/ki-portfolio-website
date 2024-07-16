@@ -3,25 +3,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 600px;
   background-color: #000; /* Example background color */
 }
 
-.hero-content {
+.hero-content-A, .hero-content-B {
   flex: 1; /* Allows the content to grow */
   color: white; /* Set text color for all child text elements */
-  margin: 100px 200px;
-  padding: 200px 100px;
+  margin: 50px 50px;
+  padding: 50px 50px;
 }
 
 .hero-image {
-  flex: 2; /* Image takes up twice the space of the content */
+  flex: 1; /* Image takes up twice the space of the content */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-image img {
-  height: 500px; /* Fixed height for large screens */
+  height: 400px; /* Fixed height for large screens */
   border-radius: 50%; /* Fully rounded image */
   width: auto; /* Maintain aspect ratio */
 }
