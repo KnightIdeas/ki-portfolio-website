@@ -53,7 +53,7 @@
   }
 
   .hero-image {
-    order: 1; /* Image comes first */
+    order: 0; /* Image comes first */
     flex: none; /* Override any previous flex settings */
   }
 
@@ -66,28 +66,3 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
-  .hero {
-    flex-direction: column; /* Stack children vertically */
-    padding: 20px; /* Reduce padding on smaller screens */
-    align-items: center; /* Align children centrally */
-    text-align: center; /* Center text alignment */
-  }
-
-  .hero-content {
-    order: 2; /* Optionally change order if you want text below image */
-    margin-bottom: 20px; /* Space between text and image */
-  }
-
-  .hero-image {
-    order: 1; /* Image comes first */
-    flex: none; /* Override any previous flex settings */
-  }
-
-  .hero-image img {
-    width: 100%; /* Full width of the container */
-    height: auto; /* Adjust height automatically */
-    border-radius: 20%; /* Less rounded corners on small screens */
-    padding: 0; /* Remove padding */
-  }
-}

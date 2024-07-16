@@ -3,6 +3,7 @@ import Carousel from "./Carousel";
 import imageA from '../assets/images/Tountra-g-project-image.png';
 import imageB from '../assets/images/DOTD-g-project-image.png';
 import imageC from '../assets/images/KnightMovies-app-image.png';
+import './ProjectOverview.css';
 
 
 function ProjectOverview () {
