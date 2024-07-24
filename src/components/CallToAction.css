@@ -1,9 +1,22 @@
 /* CallToAction.css */
+.footer-container {
+  display: flex;
+  position: sticky;
+  justify-content: space-around;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #123456;  /* A dark background color for contrast */
+  color: white;
+}
+
 .call-to-action {
     text-align: center;
     padding: 40px 20px;
-    background: #123456;  /* A dark background color for contrast */
-    color: white;
+
+    align-items: center;
+    padding: 10px 0px;
+    
   }
   
   .call-to-action h2 {
@@ -29,5 +42,14 @@
   
   .call-to-action button:hover {
     background-color: #eeeeee;
+  }
+
+  .facebook-icon {
+    color: #eeeeee;
+  }
+
+  .footer-interior {
+    flex-direction: row;
+    min-height: 100px;
   }
   
