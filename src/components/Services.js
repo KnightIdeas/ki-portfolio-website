@@ -8,39 +8,52 @@ import image3Src from '../assets/images/ServiceItem-Image-A3.webp';
 function Services() {
     return (
         <section className='services'>
-            <h2>How I Can Help</h2>
+            <h2>How can I help?</h2>
             <div className='service-list'>
                 <div className='service-item'>
                     <img src={image1Src} alt="Service description" />
-                    <h3>Leadership Qualities</h3>
+                    <h3>Web Development</h3>
                     <ul>
                         <li>
-                            Lead c# developer in multiple game jams.
+                            Well versed in core coding methedologies and patterns.
                         </li>
                         <li>
-                            Coding and technology coaching in primary schools.
+                            Well versed in front end development libraries and frameworks.
+                        </li>
+                        <li>
+                            React, Vue, TailWind, BootStrap, Next.js, Three.js.
                         </li>
                     </ul>
                 </div>
                 <div className='service-item'>
                     <img src={image2Src} alt="Service description" />
-                    <h3>Embracing New Technnologies</h3>
+                    <h3>Javascript Specialist</h3>
                     <ul>
                         <li>
-                            Early adoption of AI tools.
+                            Able to code front end and back end using JavaScript.
                         </li>
                         <li>
-                            Chat GPT and Copilot for improved debugging.
+                            Deep knowledge of using coding patterns.
                         </li>
                         <li>
-                            Projects made with OpenAI API.
+                            Factory Method, Command Pattern, Observer Pattern and more.
                         </li>
                     </ul>
                 </div>
                 <div className='service-item'>
                     <img src={image3Src} alt="Service description" />
-                    <h3>Lifelong Learning</h3>
-                    {/* Display tech icons here*/}
+                    <h3>Game Development</h3>
+                    <ul>
+                        <li>
+                            A passion for bringing digital media to life with various game development tools.
+                        </li>
+                        <li>
+                            Lead developer on multiple gamejams and game projects to date.
+                        </li>
+                        <li>
+                            Unity, Godot, Blender, Game Maker, Scratch and more.
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>

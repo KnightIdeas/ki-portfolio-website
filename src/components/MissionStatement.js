@@ -5,10 +5,10 @@ function MissionStatement () {
     return (
         <section className='mission-statement'>
         <h2>
-        How I can help
+        Trust me to deliver the experience that you desire.
         </h2>
         <p>
-        I can help you and your team acheive desirable results quickly and seamlessly.
+        Your clients and your team deserve the best web developer and game developer, rely on me to bring dynamic experiences alive following your passion and vision.
         </p>
         </section>
     );

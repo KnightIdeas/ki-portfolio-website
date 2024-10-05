@@ -19,10 +19,12 @@ return (
     <div className="project-overview-left">
         <h1>Web Projects</h1>
         <Carousel images={webImages} />
+        <button className="internal-button" onClick={""}>See All Projects</button>
     </div>
     <div className="project-overview-right">
     <h1>Game Projects</h1>
     <Carousel images={gameImages} />
+    <button className="internal-button" onClick={""}>See All Games</button>
     </div>
     </div>
 );
