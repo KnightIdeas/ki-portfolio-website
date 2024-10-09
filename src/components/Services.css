@@ -19,17 +19,17 @@
   display: flex;
   flex-wrap: wrap; /* Ensures wrapping of items */
   justify-content: space-between;
-  gap: 20px; /* Adds spacing between cards */
+  gap: 10px; /* Adds spacing between cards */
 }
 
 .service-item {
+  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width/height */
   flex: 1 1 30%; /* Each item takes up roughly 30% of the row */
   max-width: 30%; /* Ensure items don't grow beyond 30% width */
   text-align: center;
   background-color: lightgray;
   border-radius: 20px;
-  margin: 20px;
-  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width/height */
+  padding: 30px;
 }
 
 /* List items inside the cards */

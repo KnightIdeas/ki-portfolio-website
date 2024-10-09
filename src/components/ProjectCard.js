@@ -10,7 +10,7 @@ const ProjectCard = ({ project, onClick }) => {
             <div className='project-details'>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <span>{project.technologies.join(", ")}</span>
+                <span>{project.technologies}</span>
             </div>
         </div>
     );
