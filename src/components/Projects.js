@@ -29,15 +29,28 @@ const GAMES = 'Games';
 const APPS = 'Apps';
 const AI_APPS = 'AI Apps';
 
+class Icon {
+  constructor(icon, tooltip, type) {
+    this.icon = icon;
+    this.tooltip = tooltip;
+    this.type = type;
+  }
+}
+
+let unityIcon = new Icon(<FontAwesomeIcon icon={faUnity} />, 'Unity', 'fontawesome');
+let blenderIcon = new Icon(<img src={BlenderIcon} alt='Blender' />, 'Blender', 'svg');
+let kritaIcon = new Icon(<img src={KritaIcon} alt='Krita' />, 'Krita', 'svg');
+let githubIcon = new Icon(<FontAwesomeIcon icon={faGithub} />, 'GitHub', 'fontawesome');
+
 const projects = [
   {
     title: 'Draught of The Dungeon',
     description: '"Apprentice, find thy master!" A potion throwing dungeon crawler/puzzle game',
     technologies: [
-  { icon: <FontAwesomeIcon icon={faUnity} />, tooltip: 'Unity', type: 'fontawesome'},
-  { icon: <img src={BlenderIcon} alt='Blender' />, tooltip: 'Blender', type: 'svg'},
-  { icon: <img src={KritaIcon} alt='Krita' />, tooltip: 'Krita', type: 'svg'},
-  { icon: <FontAwesomeIcon icon={faGithub} />, tooltip: 'GitHub', type: 'fontawesome'},
+      unityIcon,
+      blenderIcon,
+      kritaIcon, 
+      githubIcon
     ],
     image: image1,
     type: GAMES

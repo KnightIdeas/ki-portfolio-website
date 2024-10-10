@@ -1,37 +1,168 @@
 /* src/components/ProjectCard.css */
 .project {
-    width: 280px;  /* Set a fixed width for each card */
-    margin: 10px;  /* Uniform spacing around each card */
-    border-radius: 12px;  /* Smooth corners for aesthetic */
-    overflow: hidden;  /* Ensures content does not spill outside the boundary */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for 3D effect */
-    transition: transform 0.3s ease;  /* Smooth transformation on hover */
+    flex-basis: 30%; /* Allow card to take up 30% of the container width */
+    margin: 15px; /* Increase the margin for a cleaner layout */
+    border-radius: 12px; /* Smooth corners */
+    overflow: hidden; /* Prevent content spill */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly more pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth shadow transition */
+    background-color: #fff; /* Ensure background color for consistency */
 }
 
 .project:hover {
-    transform: translateY(-5px);  /* Lift effect on hover */
+    transform: translateY(-10px); /* More pronounced lift on hover */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
 .project-image img {
-    width: 100%;  /* Ensure image covers the full width of the card */
-    height: 200px;  /* Fixed height for uniformity */
-    object-fit: cover;  /* Cover ensures the image fills the area appropriately */
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensure the image covers the area properly */
+    border-bottom: 1px solid #eee; /* Subtle separation between image and details */
 }
 
 .project-details {
-    padding: 16px;  /* Padding inside the card for spacing around text */
-    background: #fff;  /* Background to differentiate it from the image section */
-    text-align: left;  /* Align text to the left */
+    padding: 16px; /* Padding for text inside the card */
+    text-align: left; /* Align text to the left */
+    background-color: #fff; /* Ensure a clean background */
 }
 
+.project-details h3 {
+    font-size: 1.2rem; /* Slightly larger heading */
+    margin-bottom: 8px; /* Space between the title and the description */
+    color: #333; /* Dark text for readability */
+}
+
+.project-details p {
+    font-size: 0.95rem; /* Adjust font size for readability */
+    color: #666; /* Lighter text for description */
+}
+
+.technologies {
+    margin-top: 15px; /* Add space above the icon section */
+    display: flex; /* Flex layout for icons */
+    justify-content: start; /* Align icons to the left */
+    gap: 10px; /* Add space between icons */
+}
+
+.icon-class,
+.icon-class-fa {
+    position: relative; /* For tooltip positioning */
+    display: inline-block;
+    width: 30px; /* Set consistent size for all icons */
+    height: 30px;
+    vertical-align: middle;
+    line-height: 1;
+    margin: 0 5px;
+    transition: transform 0.3s ease; /* Add smooth icon hover effect */
+}
+
+/* Specific for Font Awesome icons */
+.icon-class-fa {
+    font-size: 30px; /* Font size matches the height */
+    color: rgb(0, 0, 0); /* Ensure Font Awesome icons remain white */
+    vertical-align: middle; /* Vertically align Font Awesome icons */
+}
+
+/* SVG-based icons (e.g., Godot, Krita, etc.) */
+
+
+.icon-class img,
+.icon-class svg {
+    width: 100%; /* Ensures the SVGs fit the parent container */
+    height: 100%; /* Ensures the height matches the set container height */
+    vertical-align: middle; /* Ensures alignment with text or other icons */
+}
+
+/* Tooltip styling */
+.icon-class[data-tooltip],
+.icon-class-fa[data-tooltip] {
+    cursor: pointer; /* Pointer cursor to indicate interactivity */
+}
+
+/* Tooltip box */
+.icon-class[data-tooltip]:before,
+.icon-class-fa[data-tooltip]:before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%; /* Adjusted position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: lightgray; /* Dark grey background */
+    color: #000000; /* White text */
+    padding: 8px 10px; /* Padding inside the tooltip */
+    border-radius: 4px; /* Smooth edges */
+    white-space: nowrap; /* Prevent text wrapping */
+    font-size: 0.875rem; /* Slightly smaller font size */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Prevent mouse events on tooltip */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure tooltip appears above everything */
+}
+
+/* Show tooltip on hover */
+.icon-class[data-tooltip]:hover:before,
+.icon-class-fa[data-tooltip]:hover:before {
+    opacity: 1; /* Show the tooltip */
+    transform: translateX(-50%) translateY(-5px); /* Slight upward shift */
+}
+
+/* Tooltip arrow */
+.icon-class[data-tooltip]:after,
+.icon-class-fa[data-tooltip]:after {
+    content: '';
+    position: absolute;
+    bottom: 115%; /* Arrow positioning */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: rgba(55, 55, 55, 0.9) transparent transparent transparent; /* Arrow color matches tooltip */
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Show arrow on hover */
+.icon-class[data-tooltip]:hover:after,
+.icon-class-fa[data-tooltip]:hover:after {
+    opacity: 1; /* Show arrow */
+}
+
+/* Hover effects for icons */
+.icon-class:hover {
+    color: #585858; /* Darker color on hover */
+}
+
+/* Responsive styles */
 @media (max-width: 1024px) {
     .project {
-        max-width: calc(50% - 40px); 
+        flex-basis: calc(50% - 30px); /* Two cards per row with 30px total margin */
+        margin: 15px;
     }
 }
 
 @media (max-width: 768px) {
     .project {
-        max-width: 100%; 
+        flex-basis: calc(100% - 30px); /* One card per row on small screens */
+        margin: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        flex-basis: 100%; /* Full width on very small screens */
+        margin: 10px 0; /* Smaller margin on mobile */
+    }
+
+    .project-image img {
+        height: 150px; /* Reduce image height on small screens */
+    }
+
+    .project-details h3 {
+        font-size: 1.1rem; /* Slightly smaller heading */
+    }
+
+    .technologies {
+        gap: 8px; /* Smaller gap between icons */
     }
 }

@@ -10,7 +10,11 @@ const ProjectCard = ({ project, onClick }) => {
             <div className='project-details'>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <span>{project.technologies}</span>
+                <div className='technologies'>
+                    {project.technologies.map((tech, index) => (
+                        <span key={index} className={tech.type === 'fontawesome' ? 'icon-class-fa' : 'icon-class'} data-tooltip={tech.tooltip}>{tech.icon}</span>
+                    ))}
+                </div>
             </div>
         </div>
     );
