@@ -21,7 +21,6 @@ import GodotIcon from '../assets/images/godot-engine-icon.svg';
 import BlenderIcon from '../assets/images/blender-icon.svg';
 import GameMakerIcon from '../assets/images/gamemaker-icon.svg';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { type } from '@testing-library/user-event/dist/type';
 
 const imageArrayA = [
   { icon: <FontAwesomeIcon icon={faHtml5} />, tooltip: 'HTML5', type: 'fontawesome'},

@@ -22,7 +22,6 @@ import GodotIcon from '../assets/images/godot-engine-icon.svg';
 import BlenderIcon from '../assets/images/blender-icon.svg';
 import GameMakerIcon from '../assets/images/gamemaker-icon.svg';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { type } from '@testing-library/user-event/dist/type';
 import KritaIcon from '../assets/images/krita-icon.svg';
 
 const GAMES = 'Games';
@@ -36,11 +35,19 @@ class Icon {
     this.type = type;
   }
 }
-
+// Game based icons
 let unityIcon = new Icon(<FontAwesomeIcon icon={faUnity} />, 'Unity', 'fontawesome');
 let blenderIcon = new Icon(<img src={BlenderIcon} alt='Blender' />, 'Blender', 'svg');
 let kritaIcon = new Icon(<img src={KritaIcon} alt='Krita' />, 'Krita', 'svg');
 let githubIcon = new Icon(<FontAwesomeIcon icon={faGithub} />, 'GitHub', 'fontawesome');
+// Web app based icons
+let html5Icon = new Icon(<FontAwesomeIcon icon={faHtml5} />, 'HTML5', 'fontawesome');
+let css3Icon = new Icon (<FontAwesomeIcon icon={faCss3} />, 'CSS3', 'fontawesome');
+let javaScriptIcon = new Icon (<FontAwesomeIcon icon={faJs} />, 'JavaScript', 'fontawesome');
+let reactIcon = new Icon (<FontAwesomeIcon icon={faReact} />, 'React', 'fontawesome');
+let Bootstrap = new Icon (<FontAwesomeIcon icon={faBootstrap} />, 'BootStrap', 'fontawesome');
+let nodeJSIcon = new Icon (<FontAwesomeIcon icon={faNodeJs} />, 'NodeJS', 'fontawesome');
+let nextJSIcon = new Icon (<img src={NextJSIcon} alt='NextJS'/>, 'NextJS', 'svg');
 
 const projects = [
   {
@@ -58,37 +65,65 @@ const projects = [
   {
     title: 'Tountra - Cold Steel Vengence',
     description: 'MechJam IV entry Tountra, play as a brave freedom fighter on a frozen planet, featuring fully destructable buildings a weapon upgrade system and full 3D combat',
-    technologies: [],
+    technologies: [
+      unityIcon,
+      blenderIcon,
+      githubIcon
+    ],
+    image: image2,
+    type: GAMES
+  },
+  {
+    title: 'Lex Finalis',
+    description: 'An arcade space shooter, utilising endless runner techniques with three phases and an exciting boss encounter',
+    technologies: [
+      unityIcon,
+      blenderIcon,
+      githubIcon
+    ],
     image: image2,
     type: GAMES
   },
   {
     title: 'Movie App',
-    description: 'Using the publicly available X API to find and present all your favourite movies',
-    technologies: [],
+    description: 'Using the publicly available X API to find and present all your favourite movies, with an attractive responsive UI',
+    technologies: [
+      nodeJSIcon,
+      reactIcon,
+      css3Icon,
+    ],
     image: image3,
     type: APPS
   },
   {
-    title: 'Coming Soon App Project #3',
+    title: 'Drum Machine',
     description: 'A new project',
-    technologies: [],
+    technologies: [
+      nodeJSIcon,
+      reactIcon,
+      css3Icon
+    ],
     image: imageTemp,
     type: APPS
   },
   {
-    title: 'Coming Soon AI Project #1',
+    title: 'Break Timer',
     description: 'A new project',
-    technologies: [],
+    technologies: [
+      nodeJSIcon,
+      html5Icon,
+      javaScriptIcon,
+      css3Icon
+    ],
     image: imageTemp,
-    type: AI_APPS
+    type: APPS
   },
   {
-    title: 'Coming Soon AI Project #2',
+    title: 'Simple Slot Machine',
     description: 'A new project',
     technologies: [],
     image: imageTemp,
-    type: AI_APPS
+    type: APPS
   },
 ]
 
