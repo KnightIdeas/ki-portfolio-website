@@ -1,7 +1,7 @@
 import React from "react";
 import './Modal.css';
 
-const Modal = ({ isOpen, onClose, project }) => {
+const Modal = ({ isOpen, onClose, onLink, project }) => {
     if (!isOpen) return null;
 
     return (
@@ -12,7 +12,8 @@ const Modal = ({ isOpen, onClose, project }) => {
                 <div className="image-gallery">
                     <img src={project.image} alt={project.title} />
                 </div>
-                <button onClick={onClose}>Close</button>
+                <button className="button-typeA" onClick={onClose}>Close</button>
+                <button className="button-typeB" onClick={onLink}>Project Link</button>
             </div>
 
         </div>

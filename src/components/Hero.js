@@ -3,20 +3,7 @@ import './Hero.css';
 
 function Hero({ titleA, subtitleA, titleB, subtitleB, imgUrl, imgAlt, imageArrayA, imageArrayB }) {
     // Move handleIconImages inside Hero function
-    function handleIconImages(imageArray) {
-        if (!imageArray || imageArray.length === 0) return null;
-
-        // Map through the array to get each image and return them
-        return imageArray.map((item, index) => (
-            <span
-                key={index}
-                className={item.type === 'fontawesome' ? 'icon-class-fa' : 'icon-class'}
-                data-tooltip={item.tooltip}
-            >
-                {item.icon}
-            </span>
-        ));
-    }
+    
 
     return (
         <section className="hero">
@@ -33,10 +20,26 @@ function Hero({ titleA, subtitleA, titleB, subtitleB, imgUrl, imgAlt, imageArray
             <div className="hero-content-B">
                 <h2>{titleB}</h2>
                 <h3>{subtitleB}</h3>
+                <div className="game_icon-container">
                     {handleIconImages(imageArrayB)}
+                </div>
             </div>
         </section>
     );
 }
 
 export default Hero;
+function handleIconImages(imageArray) {
+        if (!imageArray || imageArray.length === 0) return null;
+
+        // Map through the array to get each image and return them
+        return imageArray.map((item, index) => (
+            <span
+                key={index}
+                className={item.type === 'fontawesome' ? 'icon-class-fa' : 'icon-class'}
+                data-tooltip={item.tooltip}
+            >
+                {item.icon}
+            </span>
+        ));
+    }

@@ -38,7 +38,6 @@ const imageArrayB = [
   { icon: <img src={BlenderIcon} alt='Blender' />, tooltip: 'Blender', type: 'svg'},
   { icon: <img src={GameMakerIcon} alt='Game Maker' />,tooltip: 'Game GameMakerIcon', type: 'svg'},
   { icon: <FontAwesomeIcon icon={faGithub} />, tooltip: 'Github', type: 'fontawesome'}
-  
 ];
 
 function Home() {

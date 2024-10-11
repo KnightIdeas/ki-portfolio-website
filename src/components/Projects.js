@@ -52,7 +52,7 @@ let nextJSIcon = new Icon (<img src={NextJSIcon} alt='NextJS'/>, 'NextJS', 'svg'
 const projects = [
   {
     title: 'Draught of The Dungeon',
-    description: '"Apprentice, find thy master!" A potion throwing dungeon crawler/puzzle game',
+    description: '"Apprentice, find thy master!" A potion throwing dungeon crawler/puzzle game.',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -60,29 +60,32 @@ const projects = [
       githubIcon
     ],
     image: image1,
-    type: GAMES
+    type: GAMES,
+    link: 'https://knight-ideas.itch.io/draught-of-the-dungeon'
   },
   {
     title: 'Tountra - Cold Steel Vengence',
-    description: 'MechJam IV entry Tountra, play as a brave freedom fighter on a frozen planet, featuring fully destructable buildings a weapon upgrade system and full 3D combat',
+    description: 'MechJam IV entry Tountra, play as a brave freedom fighter on a frozen planet, featuring fully destructable buildings a weapon upgrade system and full 3D combat.',
     technologies: [
       unityIcon,
       blenderIcon,
       githubIcon
     ],
     image: image2,
-    type: GAMES
+    type: GAMES,
+    link: 'https://knight-ideas.itch.io/mech-jam-iv-tountra-cold-steel-vengeance'
   },
   {
     title: 'Lex Finalis',
-    description: 'An arcade space shooter, utilising endless runner techniques with three phases and an exciting boss encounter',
+    description: 'An arcade space shooter, utilising endless runner techniques with three phases and an exciting boss encounter.',
     technologies: [
       unityIcon,
       blenderIcon,
       githubIcon
     ],
     image: image2,
-    type: GAMES
+    type: GAMES,
+    link: 'https://knight-ideas.itch.io/lex-finalis-demo'
   },
   {
     title: 'Movie App',
@@ -97,7 +100,7 @@ const projects = [
   },
   {
     title: 'Drum Machine',
-    description: 'A new project',
+    description: 'A button based drum machine, using keyinputs via JavaScript of mouse input to play different drum sound samples.',
     technologies: [
       nodeJSIcon,
       reactIcon,
@@ -108,9 +111,8 @@ const projects = [
   },
   {
     title: 'Break Timer',
-    description: 'A new project',
+    description: 'Handy break timer, allowing for Pomodoro style work, with an alarm and adjustable timers.',
     technologies: [
-      nodeJSIcon,
       html5Icon,
       javaScriptIcon,
       css3Icon
@@ -121,7 +123,22 @@ const projects = [
   {
     title: 'Simple Slot Machine',
     description: 'A new project',
-    technologies: [],
+    technologies: [
+      html5Icon,
+      javaScriptIcon,
+      css3Icon
+    ],
+    image: imageTemp,
+    type: APPS
+  },
+  {
+    title: 'JavaScript Calculator',
+    description: 'A new project',
+    technologies: [
+      html5Icon,
+      javaScriptIcon,
+      css3Icon
+    ],
     image: imageTemp,
     type: APPS
   },
@@ -138,6 +155,10 @@ const Projects = () => {
 
   const handleCloseModal = () => {
     setModalOpen(false);
+  };
+
+  const handleProjectLink = () => {
+    window.open(currentProject.link);
   };
 
   const projectTypes = [GAMES, APPS, AI_APPS];
@@ -162,7 +183,7 @@ const Projects = () => {
           </div>
         </div>
       ))}
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} project={currentProject} />
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} onLink={handleProjectLink} project={currentProject} />
     </div>
   );
 };
