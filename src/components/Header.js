@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // Ensure this is linked properly
+import ModalContact from './ModalContact';
 
 function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const handleContactClick = () => {
+    setModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+    setModalOpen(false);
+    };
 
     return (
         <header className='header'>
@@ -19,7 +30,7 @@ function Header() {
                 <Link to='/' className='nav-link'>Home</Link>
                 <Link to='/projects' className='nav-link'>Projects</Link>
                 <Link to='/contact' className='nav-link'>Contact</Link>
-                <Link to='/contact' className='cta-button'>Let's Collaborate</Link>
+                <button className='button-typeB' onClick={handleContactClick}>Lets Collaborate</button>
             </nav>
 
             {/* Mobile Navigation */}
@@ -28,9 +39,10 @@ function Header() {
                     <Link to='/' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                     <Link to='/projects' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
                     <Link to='/contact' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-                    <Link to='/contact' className='cta-button' onClick={() => setIsMobileMenuOpen(false)}>Let's Collaborate</Link>
+                    <button className='button-typeB'>Lets Collaborate</button>
                 </nav>
             )}
+            <ModalContact isOpen={isModalOpen} onClose={handleCloseModal} />
         </header>
     );
 }
