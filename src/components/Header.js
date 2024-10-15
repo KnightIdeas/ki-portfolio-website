@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css'; // Ensure this is linked properly
+import ModalContact from './ModalContact';
+import CurrentCV from '../assets/files/WebDevCV-ChristopherKnight-15-12-23.pdf';
 
 function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const [isModalOpen, setModalOpen] = useState(false);
+
+    const handleContactClick = () => {
+    setModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+    setModalOpen(false);
+    };
 
     return (
         <header className='header'>
@@ -18,8 +30,8 @@ function Header() {
             <nav className='desktop-nav'>
                 <Link to='/' className='nav-link'>Home</Link>
                 <Link to='/projects' className='nav-link'>Projects</Link>
-                <Link to='/contact' className='nav-link'>Contact</Link>
-                <Link to='/contact' className='cta-button'>Let's Collaborate</Link>
+                <Link to='/' className='nav-link' onClick={handleContactClick}>Contact</Link>
+                <a href={CurrentCV} className='nav-link'>CV</a>
             </nav>
 
             {/* Mobile Navigation */}
@@ -27,10 +39,11 @@ function Header() {
                 <nav className='mobile-nav'>
                     <Link to='/' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                     <Link to='/projects' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
-                    <Link to='/contact' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-                    <Link to='/contact' className='cta-button' onClick={() => setIsMobileMenuOpen(false)}>Let's Collaborate</Link>
+                    <Link to='/contact' className='nav-link' onClick={handleContactClick}>Contact</Link>
+                    <a href={CurrentCV} className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>CV</a>
                 </nav>
             )}
+            <ModalContact isOpen={isModalOpen} onClose={handleCloseModal} />
         </header>
     );
 }
