@@ -29,8 +29,7 @@ function Header() {
             <nav className='desktop-nav'>
                 <Link to='/' className='nav-link'>Home</Link>
                 <Link to='/projects' className='nav-link'>Projects</Link>
-                <Link to='/contact' className='nav-link'>Contact</Link>
-                <button className='button-typeB' onClick={handleContactClick}>Lets Collaborate</button>
+                <Link to='/' className='nav-link' onClick={handleContactClick}>Contact</Link>
             </nav>
 
             {/* Mobile Navigation */}
@@ -38,8 +37,7 @@ function Header() {
                 <nav className='mobile-nav'>
                     <Link to='/' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                     <Link to='/projects' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
-                    <Link to='/contact' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-                    <button className='button-typeB'>Lets Collaborate</button>
+                    <Link to='/contact' className='nav-link' onClick={handleContactClick}>Contact</Link>
                 </nav>
             )}
             <ModalContact isOpen={isModalOpen} onClose={handleCloseModal} />

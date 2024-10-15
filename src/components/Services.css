@@ -35,6 +35,12 @@
 /* List items inside the cards */
 .service-item ul {
   list-style: none;
+  padding-left: 0;
+}
+
+.service-item ul li {
+  text-align: center;
+  font-size: 1rem;
 }
 
 .service-item h3 {
@@ -43,6 +49,7 @@
 
 .service-item p {
   font-size: 1rem;
+  text-align: center;
 }
 
 /* Responsive adjustments */
