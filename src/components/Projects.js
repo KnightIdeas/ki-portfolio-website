@@ -5,6 +5,7 @@ import './Projects.css';
 import image1 from '../assets/images/DOTD-g-project-image.png';
 import image2 from '../assets/images/Tountra-g-project-image.png';
 import image3 from '../assets/images/KnightMovies-app-image.png';
+import image4 from '../assets/images/SimpleSlotMachine-app-image.png';
 import imageTemp from '../assets/images/ComingSoon-project-image.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -128,8 +129,9 @@ const projects = [
       javaScriptIcon,
       css3Icon
     ],
-    image: imageTemp,
-    type: APPS
+    image: image4,
+    type: APPS,
+    link: 'https://knightideas.github.io/Slot_Machine/'
   },
   {
     title: 'JavaScript Calculator',
