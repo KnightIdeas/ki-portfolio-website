@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import ProjectCard from './ProjectCard';
 import Modal from './Modal';
 import './Projects.css';
-import image1 from '../assets/images/DOTD-g-project-image.png';
-import image2 from '../assets/images/Tountra-g-project-image.png';
-import image3 from '../assets/images/KnightMovies-app-image.png';
-import image4 from '../assets/images/SimpleSlotMachine-app-image.png';
+import DOTDImageMain from '../assets/images/DOTD-g-project-image.png';
+import TountraImageMain from '../assets/images/Tountra-g-project-image.png';
+import LexFinalisImageMain from '../assets/images/LexFinalis-g-project-image.png';
+import MovieAppImageMain from '../assets/images/KnightMovies-app-image.png';
+import SimpleSlotImageMain from '../assets/images/SimpleSlotMachine-app-image.png';
 import imageTemp from '../assets/images/ComingSoon-project-image.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -60,7 +61,7 @@ const projects = [
       kritaIcon, 
       githubIcon
     ],
-    image: image1,
+    image: DOTDImageMain,
     type: GAMES,
     link: 'https://knight-ideas.itch.io/draught-of-the-dungeon'
   },
@@ -72,7 +73,7 @@ const projects = [
       blenderIcon,
       githubIcon
     ],
-    image: image2,
+    image: TountraImageMain,
     type: GAMES,
     link: 'https://knight-ideas.itch.io/mech-jam-iv-tountra-cold-steel-vengeance'
   },
@@ -84,7 +85,7 @@ const projects = [
       blenderIcon,
       githubIcon
     ],
-    image: image2,
+    image: LexFinalisImageMain,
     type: GAMES,
     link: 'https://knight-ideas.itch.io/lex-finalis-demo'
   },
@@ -96,7 +97,7 @@ const projects = [
       reactIcon,
       css3Icon,
     ],
-    image: image3,
+    image: MovieAppImageMain,
     type: APPS
   },
   {
@@ -129,7 +130,7 @@ const projects = [
       javaScriptIcon,
       css3Icon
     ],
-    image: image4,
+    image: SimpleSlotImageMain,
     type: APPS,
     link: 'https://knightideas.github.io/Slot_Machine/'
   },
