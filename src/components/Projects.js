@@ -9,6 +9,7 @@ import MovieAppImageMain from '../assets/images/KnightMovies-app-image.png';
 import SimpleSlotImageMain from '../assets/images/SimpleSlotMachine-app-image.png';
 import DrumMachineImageMain from '../assets/images/DrumMachine-app-image.png';
 import BreakTimerImageMain from '../assets/images/JavaScriptBreakTimer-app-image.png';
+import CalculatorImageMain from '../assets/images/JavaScriptCaluculator-app-image.png';
 import imageTemp from '../assets/images/ComingSoon-project-image.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -146,8 +147,9 @@ const projects = [
       javaScriptIcon,
       css3Icon
     ],
-    image: imageTemp,
-    type: APPS
+    image: CalculatorImageMain,
+    type: APPS,
+    link: 'https://knightideas.github.io/js-calculator/'
   },
 ]
 
