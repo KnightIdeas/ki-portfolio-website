@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/ki-portfolio-website/static/css/main.eaf87611.css",
+    "main.js": "/ki-portfolio-website/static/js/main.eb3b273b.js",
+    "static/js/453.0b951824.chunk.js": "/ki-portfolio-website/static/js/453.0b951824.chunk.js",
+    "static/media/DOTD-g-project-image.png": "/ki-portfolio-website/static/media/DOTD-g-project-image.6a624a1f8d56b49a5391.png",
+    "static/media/Tountra-g-project-image.png": "/ki-portfolio-website/static/media/Tountra-g-project-image.c23762daf5008b5100cc.png",
+    "static/media/KnightMovies-app-image.png": "/ki-portfolio-website/static/media/KnightMovies-app-image.3c8182395b8ceb7d1aa1.png",
+    "static/media/LexFinalis-g-project-image.png": "/ki-portfolio-website/static/media/LexFinalis-g-project-image.c3b99306359932375fa7.png",
+    "static/media/Logo V1.png": "/ki-portfolio-website/static/media/Logo V1.556cac306c9c30867347.png",
+    "static/media/WebDevCV-ChristopherKnight-15-12-23.pdf": "/ki-portfolio-website/static/media/WebDevCV-ChristopherKnight-15-12-23.38b3813b6779d68a0f1b.pdf",
+    "static/media/ServiceItem-Image-A2.webp": "/ki-portfolio-website/static/media/ServiceItem-Image-A2.866572f4ebe818d90509.webp",
+    "static/media/ServiceItem-Image-A3.webp": "/ki-portfolio-website/static/media/ServiceItem-Image-A3.8909ec768d7336f7b467.webp",
+    "static/media/ComingSoon-project-image.png": "/ki-portfolio-website/static/media/ComingSoon-project-image.610a0085174b19d85da1.png",
+    "static/media/ServiceItem-Image-A1.webp": "/ki-portfolio-website/static/media/ServiceItem-Image-A1.a8d6d6a6751c07b0d203.webp",
+    "static/media/DrumMachine-app-image.png": "/ki-portfolio-website/static/media/DrumMachine-app-image.be04195c7758daf4802c.png",
+    "static/media/JavaScriptBreakTimer-app-image.png": "/ki-portfolio-website/static/media/JavaScriptBreakTimer-app-image.c05adb1f015dd2c24602.png",
+    "static/media/SimpleSlotMachine-app-image.png": "/ki-portfolio-website/static/media/SimpleSlotMachine-app-image.0eb6a94ffd88f3fe699b.png",
+    "static/media/JavaScriptCaluculator-app-image.png": "/ki-portfolio-website/static/media/JavaScriptCaluculator-app-image.2f3a3e3582b5cc62915e.png",
+    "static/media/nextjs-icon.svg": "/ki-portfolio-website/static/media/nextjs-icon.e3c042b9d9d809ebb67e9bc6e1e5f70d.svg",
+    "static/media/godot-engine-icon.svg": "/ki-portfolio-website/static/media/godot-engine-icon.d2f7dad48877c7e328f419c5201fb605.svg",
+    "static/media/blender-icon.svg": "/ki-portfolio-website/static/media/blender-icon.c1d494afb707eecdd59c8370737990d1.svg",
+    "static/media/krita-icon.svg": "/ki-portfolio-website/static/media/krita-icon.2bf806e813dbced95914e12c170821a3.svg",
+    "index.html": "/ki-portfolio-website/index.html",
+    "static/media/gamemaker-icon.svg": "/ki-portfolio-website/static/media/gamemaker-icon.6acdb458fc4dbc003e190bbbeb288c9f.svg",
+    "main.eaf87611.css.map": "/ki-portfolio-website/static/css/main.eaf87611.css.map",
+    "main.eb3b273b.js.map": "/ki-portfolio-website/static/js/main.eb3b273b.js.map",
+    "453.0b951824.chunk.js.map": "/ki-portfolio-website/static/js/453.0b951824.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eaf87611.css",
+    "static/js/main.eb3b273b.js"
+  ]
+}
