@@ -25,16 +25,16 @@ function CallToAction() {
         <div className="footer-container">
             <section className="footer-interior">
                 <div className="social-icons">
-                    <LinkButton to='https://www.facebook.com/' external={true} className='social-icon'>
+                    <LinkButton to='https://www.facebook.com/KnightIdeas' external={true} className='social-icon'>
                         <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
                     </LinkButton>
-                    <LinkButton to='https://www.linkedin.com/in/' external={true} className='social-icon'>
+                    <LinkButton to='https://www.linkedin.com/in/knightideas/' external={true} className='social-icon'>
                         <FontAwesomeIcon icon={faLinkedin} className="linkedin-icon" />
                     </LinkButton>
-                    <LinkButton to='https://www.github.com/' external={true} className='social-icon'>
+                    <LinkButton to='https://github.com/KnightIdeas' external={true} className='social-icon'>
                         <FontAwesomeIcon icon={faGithub} className="github-icon" />
                     </LinkButton>
-                    <LinkButton to='' external={true} className='social-icon'>
+                    <LinkButton to='mailto:chris@knightideas.co.uk' external={true} className='social-icon'>
                         <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
                     </LinkButton>
                 </div>
