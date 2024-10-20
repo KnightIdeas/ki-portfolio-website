@@ -28,6 +28,7 @@ import BlenderIcon from '../assets/images/blender-icon.svg';
 import GameMakerIcon from '../assets/images/gamemaker-icon.svg';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import KritaIcon from '../assets/images/krita-icon.svg';
+import CallToAction from './CallToAction';
 
 const GAMES = 'Games';
 const APPS = 'Apps';
@@ -193,6 +194,7 @@ const Projects = () => {
         </div>
       ))}
       <Modal isOpen={isModalOpen} onClose={handleCloseModal} onLink={handleProjectLink} project={currentProject} />
+      <CallToAction />
     </div>
   );
 };
