@@ -1,7 +1,8 @@
 /* src/components/Projects.css */
 
  .projects-page {
-    padding: 4rem;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f8; 
 }
 
