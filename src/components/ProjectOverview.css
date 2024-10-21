@@ -1,0 +1,17 @@
+.project-overview-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    max-height: 800px;
+}
+
+.project-overview-left {
+    flex: 1;
+    margin: 20px;
+}
+
+.project-overview-right {
+    flex: 1;
+    margin: 20px;
+}

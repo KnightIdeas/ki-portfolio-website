@@ -1,0 +1,42 @@
+/* src/components/Projects.css */
+
+ .projects-page {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f8; 
+}
+
+.project-category {
+    margin-bottom: 2rem;  /* Space between categories */
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.project-category h2 {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+ @media (min-width: 768px) {
+    .projects-page {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .projects-page {
+        padding: 1rem;
+    }
+    .projects-container {
+        justify-content: space-around;
+    }
+}
+
