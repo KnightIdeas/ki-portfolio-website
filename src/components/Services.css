@@ -62,7 +62,7 @@
 
 @media (max-width: 768px) {
   .service-item img {
-    height: 150px;
+    height: auto;
   }
 
   .service-item {
@@ -73,7 +73,7 @@
 
 @media (max-width: 480px) {
   .service-item img {
-    height: 100px;
+    height: auto;
   }
 
   .service-item {
