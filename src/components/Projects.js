@@ -102,7 +102,8 @@ const projects = [
       css3Icon,
     ],
     image: MovieAppImageMain,
-    type: APPS
+    type: APPS,
+    link: 'https://movie-app-nu-umber-22.vercel.app/'
   },
   {
     title: 'Drum Machine',
@@ -114,7 +115,7 @@ const projects = [
     ],
     image: DrumMachineImageMain,
     type: APPS,
-    link: 'https://knightideas.github.io/drum-machine/'
+    link: 'https://drum-machine-virid-iota.vercel.app/'
   },
   {
     title: 'Break Timer',
@@ -130,7 +131,7 @@ const projects = [
   },
   {
     title: 'Simple Slot Machine',
-    description: 'A new project',
+    description: 'A JavaScript based slot machine that renders to a grid, place your bets!',
     technologies: [
       html5Icon,
       javaScriptIcon,
@@ -142,7 +143,7 @@ const projects = [
   },
   {
     title: 'JavaScript Calculator',
-    description: 'A new project',
+    description: 'JavaScript calculator capable of most basic calculations.',
     technologies: [
       html5Icon,
       javaScriptIcon,

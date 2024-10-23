@@ -18,7 +18,7 @@ function Services() {
                             Well versed in core coding methedologies and patterns.
                         </li>
                         <li>
-                            Well versed in front end development libraries and frameworks.
+                            Experience with modern front end development libraries and frameworks.
                         </li>
                         <li>
                             React, Vue, TailWind, BootStrap, Next.js, Three.js.
@@ -33,7 +33,7 @@ function Services() {
                             Able to code front end and back end using JavaScript.
                         </li>
                         <li>
-                            Deep knowledge of using coding patterns.
+                            Deep knowledge of popular coding patterns such as:
                         </li>
                         <li>
                             Factory Method, Command Pattern, Observer Pattern and more.
