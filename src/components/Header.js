@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import ModalContact from './ModalContact';
-import CurrentCV from '../assets/files/Web Development CV 25-10-2024'; // CV file
+import CurrentCV from '../assets/files/Web Development CV 25-10-2024.pdf'; // CV file
 
 function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
