@@ -1,82 +1,111 @@
 /* Services.css */
 .services {
-  padding: 40px 40px;
+  padding: 60px 40px; /* Increased padding for more breathing space */
   background: #fff;
-}
-
-.service-item img {
-  width: 200px;  /* Set as needed */
-  height: auto;
-  border-radius: 50%;  /* Makes the image round */
 }
 
 .services h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px; /* More margin to separate the title */
+  font-size: 2rem; /* Larger font size for section title */
+  color: #333;
 }
 
 .service-list {
   display: flex;
-  flex-wrap: wrap; /* Ensures wrapping of items */
+  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 10px; /* Adds spacing between cards */
+  gap: 20px; /* Increased gap for more separation between cards */
+  padding: 0 10px; /* Add some horizontal padding for better balance */
 }
 
 .service-item {
-  box-sizing: border-box; /* Ensure padding and borders are included in the element's total width/height */
-  flex: 1 1 30%; /* Each item takes up roughly 30% of the row */
-  max-width: 30%; /* Ensure items don't grow beyond 30% width */
+  box-sizing: border-box;
+  flex: 1 1 30%;
+  max-width: 30%;
   text-align: center;
-  background-color: lightgray;
-  border-radius: 20px;
-  padding: 30px;
+  background-color: #f3f3f3; /* Lighter background color for a softer look */
+  border-radius: 15px; /* Adjusted radius for subtle rounding */
+  padding: 40px 20px; /* Consistent padding for text and images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effect */
 }
 
-/* List items inside the cards */
-.service-item ul {
-  list-style: none;
-  padding-left: 0;
+/* Hover effect for cards */
+.service-item:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.service-item ul li {
-  text-align: center;
-  font-size: 1rem;
+.service-item img {
+  width: 100px; /* Uniform icon size */
+  height: 100px;
+  border-radius: 50%; /* Keeps icons round */
+  margin-bottom: 20px; /* Consistent spacing below icon */
+  object-fit: cover; /* Ensures image is fully contained */
+  border: 3px solid #ccc; /* Border around icons for consistency */
 }
 
 .service-item h3 {
   margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
 }
 
-.service-item p {
+.service-item ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.service-item ul li {
   font-size: 1rem;
-  text-align: center;
+  line-height: 1.6;
+  color: #555; /* Softer color for readability */
 }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .service-item {
-    flex: 1 1 45%; /* Take up 45% of the row for two items per row */
+    flex: 1 1 45%;
     max-width: 45%;
+    padding: 30px 15px; /* Slightly reduced padding on medium screens */
   }
 }
 
 @media (max-width: 768px) {
   .service-item img {
-    height: auto;
+    width: 80px;
+    height: 80px;
   }
 
   .service-item {
-    flex: 1 1 100%; /* Full-width items on smaller screens */
+    flex: 1 1 100%;
     max-width: 100%;
+    padding: 25px 10px; /* Reduced padding for smaller screens */
+  }
+
+  .services h2 {
+    font-size: 1.8rem; /* Slightly smaller section title */
   }
 }
 
 @media (max-width: 480px) {
-  .service-item img {
-    height: auto;
+  .service-item {
+    margin: 10px 0; /* Reduced margin between cards */
   }
 
-  .service-item {
-    margin: 10px 0; /* Reduce margin for smaller screens */
+  .service-item img {
+    width: 70px;
+    height: 70px; /* Smaller icon size for small screens */
+  }
+
+  .service-item ul li {
+    font-size: 0.9rem; /* Smaller font for tight spaces */
+  }
+
+  .services h2 {
+    font-size: 1.6rem;
+    margin-bottom: 30px; /* Less spacing on small screens */
   }
 }

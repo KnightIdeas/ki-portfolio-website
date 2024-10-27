@@ -1,14 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import LinkButton from "./LinkButton";
 import './CallToAction.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"; // Brand icons
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"; // Envelope from solid icons
-import Modal from "./Modal";
 import ModalContact from "./ModalContact";
-import { useState } from "react";
 import CurrentCV from '../assets/files/WebDevCV-ChristopherKnight-15-12-23.pdf';
-
 
 function CallToAction() {
     const [isModalOpen, setModalOpen] = useState(false);
@@ -25,34 +22,35 @@ function CallToAction() {
         <div className="footer-container">
             <section className="footer-interior">
                 <div className="social-icons">
-                    <LinkButton to='https://www.facebook.com/KnightIdeas' external={true} className='social-icon'>
-                        <FontAwesomeIcon icon={faFacebook} className="facebook-icon" />
+                    {/* Social Icons with Tooltips */}
+                    <LinkButton to='https://www.facebook.com/KnightIdeas' data-tooltip="Facebook" external={true} className='social-icon'>
+                        <FontAwesomeIcon icon={faFacebook} />
                     </LinkButton>
-                    <LinkButton to='https://www.linkedin.com/in/knightideas/' external={true} className='social-icon'>
-                        <FontAwesomeIcon icon={faLinkedin} className="linkedin-icon" />
+                    <LinkButton to='https://www.linkedin.com/in/knightideas/' data-tooltip="LinkedIn" external={true} className='social-icon'>
+                        <FontAwesomeIcon icon={faLinkedin} />
                     </LinkButton>
-                    <LinkButton to='https://github.com/KnightIdeas' external={true} className='social-icon'>
-                        <FontAwesomeIcon icon={faGithub} className="github-icon" />
+                    <LinkButton to='https://github.com/KnightIdeas' data-tooltip="GitHub" external={true} className='social-icon'>
+                        <FontAwesomeIcon icon={faGithub} />
                     </LinkButton>
-                    <LinkButton to='mailto:chris@knightideas.co.uk' external={true} className='social-icon'>
-                        <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
+                    <LinkButton to='mailto:chris@knightideas.co.uk' data-tooltip="Email" external={true} className='social-icon'>
+                        <FontAwesomeIcon icon={faEnvelope} />
                     </LinkButton>
                 </div>
             </section>
             <section className="call-to-action">
                 <h2>Get in touch</h2>
-                <button onClick={handleContactClick}>Let's Collaborate</button>
                 
-                {/* Download CV Button */}
+                {/* "Let's Collaborate" button with a unique class */}
+                <button onClick={handleContactClick} className="collaborate-btn">Let's Collaborate</button>
+                
+                {/* "Download CV" button with a unique class */}
                 <a href={CurrentCV} className='nav-link'>
-                    <button>Download CV</button>
+                    <button className="cv-btn">Download CV</button>
                 </a>
             </section>
             
-            
             <ModalContact isOpen={isModalOpen} onClose={handleCloseModal} />
         </div>
-        
     );
 }
 

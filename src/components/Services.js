@@ -10,51 +10,55 @@ function Services() {
         <section className='services'>
             <h2>How can I help?</h2>
             <div className='service-list'>
+
                 <div className='service-item'>
-                    <img src={image1Src} alt="Service description" />
+                    <img src={image1Src} alt="Web Development" />
                     <h3>Web Development</h3>
                     <ul>
                         <li>
-                            Well versed in core coding methedologies and patterns.
+                            Expertise in crafting responsive, mobile-first web applications with clean and scalable code.
                         </li>
                         <li>
-                            Experience with modern front end development libraries and frameworks.
+                            Experienced with modern front-end frameworks and libraries, building user-centered interfaces.
                         </li>
                         <li>
-                            React, Vue, TailWind, BootStrap, Next.js, Three.js.
+                            Technologies: React, Vue, Tailwind CSS, Bootstrap, Next.js, Three.js.
                         </li>
                     </ul>
                 </div>
+
                 <div className='service-item'>
-                    <img src={image2Src} alt="Service description" />
-                    <h3>Javascript Specialist</h3>
+                    <img src={image2Src} alt="JavaScript Specialist" />
+                    <h3>JavaScript Specialist</h3>
                     <ul>
                         <li>
-                            Able to code front end and back end using JavaScript.
+                            Proficient in both front-end and back-end JavaScript, ensuring seamless full-stack development.
                         </li>
                         <li>
-                            Deep knowledge of popular coding patterns such as:
+                            Strong understanding of advanced coding patterns, enhancing modularity and efficiency.
                         </li>
                         <li>
-                            Factory Method, Command Pattern, Observer Pattern and more.
+                            Patterns: Factory Method, Command Pattern, Observer Pattern, and more.
                         </li>
                     </ul>
                 </div>
+
                 <div className='service-item'>
-                    <img src={image3Src} alt="Service description" />
+                    <img src={image3Src} alt="Game Development" />
                     <h3>Game Development</h3>
                     <ul>
                         <li>
-                            A passion for bringing digital media to life with various game development tools.
+                            Passionate about creating immersive digital experiences through game development.
                         </li>
                         <li>
-                            Lead developer on multiple gamejams and game projects to date.
+                            Led and contributed to multiple game jams and projects, from concept to completion.
                         </li>
                         <li>
-                            Unity, Godot, Blender, Game Maker, Scratch and more.
+                            Tools: Unity, Godot, Blender, Game Maker, Scratch, and more.
                         </li>
                     </ul>
                 </div>
+
             </div>
         </section>
     );
