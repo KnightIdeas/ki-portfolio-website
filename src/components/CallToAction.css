@@ -2,19 +2,19 @@
 
 .footer-container {
   display: flex;
-  justify-content: space-between; /* Spreads out sections evenly */
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background-color: #123456;  /* A dark background for contrast */
+  padding: 20px;
+  background-color: #123456; /* Dark background for high contrast */
   color: white;
-  flex-wrap: wrap;  /* Allows content to wrap for smaller screens */
+  flex-wrap: wrap;
   box-sizing: border-box;
   width: 100%;
 }
 
 .footer-interior {
   display: flex;
-  justify-content: center;  /* Center the social icons horizontally */
+  justify-content: center;
   align-items: center;
   width: 100%;
   margin-top: 20px;
@@ -23,80 +23,116 @@
 .call-to-action {
   flex: 1;
   text-align: center;
-  padding: 10px 20px;  /* Reduced padding for compact size */
+  padding: 10px 20px;
 }
 
 .call-to-action h2 {
   margin-bottom: 20px;
-  font-size: 2rem;  /* Smaller heading size */
+  font-size: 2rem;
+  color: #f0f0f0;
 }
 
+/* Call-to-action buttons */
 .call-to-action button {
-  padding: 8px 16px;  /* Reduced button size */
-  font-size: 1rem;
-  color: #123456;
-  background-color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 10px;  /* Adds space between buttons */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Soft shadow for better effect */
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.call-to-action button:hover {
-  background-color: #f0f0f0;
+/* Collaborate Button - Primary Action */
+.call-to-action .collaborate-btn {
+  background-color: #ff5722; /* Distinct color for emphasis */
+  color: white;
+}
+
+.call-to-action .collaborate-btn:hover {
+  background-color: #e64a19; /* Darker shade on hover */
   transform: scale(1.05);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;  /* Center the icons */
-  gap: 15px;  /* Space between icons */
+/* Download CV Button - Secondary Action */
+.call-to-action .cv-btn {
+  background-color: #4CAF50; /* Different color to set it apart */
+  color: white;
 }
 
-.social-icon {
-  font-size: 1.5rem;
-  padding: 5px;
-  border-radius: 10px;
-  width: 100px;
+.call-to-action .cv-btn:hover {
+  background-color: #388E3C; /* Darker shade on hover */
+  transform: scale(1.05);
+}
+
+/* Social icons styling */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Larger gap for better spacing */
 }
 
 .social-icons a {
-  font-size: 2.5rem;  /* Large, clear icons */
-  color: #ffffff;  /* White icon color */
+  font-size: 2.8rem; /* Larger icon size */
+  color: #ffffff;
+  position: relative;
   transition: color 0.3s ease;
 }
 
 .social-icons a:hover {
-  color: #f0f0f0;  /* Slight color change on hover */
+  color: #ff5722; /* Highlight color on hover for visibility */
 }
 
-/* Responsive for smaller screens */
+/* Tooltips for social icons */
+.social-icons a::after {
+  content: attr(data-tooltip); /* Tooltip content from data attribute */
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.social-icons a:hover::after {
+  opacity: 1;
+}
+
+.call-to-action .collaborate-btn {
+  background-color: #ff5722;
+  color: white;
+}
+
+.call-to-action .cv-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Responsive adjustments for smaller screens */
 @media screen and (max-width: 768px) {
   .footer-container {
-      flex-direction: column;
-      padding: 20px;
-      width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
   }
 
   .call-to-action h2 {
-      font-size: 1.8rem;
+    font-size: 1.8rem;
   }
 
   .call-to-action button {
-      font-size: 0.9rem;
+    font-size: 1rem;
   }
 
   .footer-interior {
-      margin-top: 15px;
-  }
-
-  .social-icon {
-    font-size: 1.5rem;
-    padding: 2.5px;
-    border-radius: 10px;
-    width: 80px;
-    height: 50px;
+    margin-top: 15px;
   }
 }

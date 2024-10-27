@@ -172,7 +172,7 @@ const Projects = () => {
     window.open(currentProject.link);
   };
 
-  const projectTypes = [GAMES, APPS, AI_APPS];
+  const projectTypes = [APPS, AI_APPS, GAMES];
 
   const categorizedProjects = projectTypes.map(type => ({
     type,
