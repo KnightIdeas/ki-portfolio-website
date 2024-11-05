@@ -8,7 +8,7 @@ const Modal = ({ isOpen, onClose, onLink, project }) => {
         <div className="modal-overlay">
             <div className="modal-content">
                 <h2>{project.title}</h2>
-                <p>{project.description}</p>
+                <p>{project.fullDescription}</p>
                 <div className="image-gallery">
                     <img src={project.image} alt={project.title} />
                 </div>
