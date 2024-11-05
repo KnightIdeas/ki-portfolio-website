@@ -59,6 +59,7 @@ const projects = [
   {
     title: 'Draught of The Dungeon',
     description: '"Apprentice, find thy master!" A potion throwing dungeon crawler/puzzle game.',
+    fullDescription: '',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -72,6 +73,7 @@ const projects = [
   {
     title: 'Tountra - Cold Steel Vengence',
     description: 'MechJam IV entry Tountra, play as a brave freedom fighter on a frozen planet, featuring fully destructable buildings a weapon upgrade system and full 3D combat.',
+    fullDescription: '',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -84,6 +86,7 @@ const projects = [
   {
     title: 'Lex Finalis',
     description: 'An arcade space shooter, utilising endless runner techniques with three phases and an exciting boss encounter.',
+    fullDescription: '',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -95,7 +98,8 @@ const projects = [
   },
   {
     title: 'Movie App',
-    description: 'Using the publicly available X API to find and present all your favourite movies, with an attractive responsive UI',
+    description: 'Using the publicly available OMDb RESTful API to find and present all your favourite movies, with an attractive responsive UI',
+    fullDescription: 'Built a responsive Movie App using React, NodeJS, and CSS, allowing users to search and filter films with the OMDb API. Enhanced search functionality using Regex for precise results. Features include a dark theme and a hover overlay displaying movie details like release year and poster visuals. While following a tutorial, I expanded it by adding comprehensive search capabilities and improving the overall user experience.',
     technologies: [
       nodeJSIcon,
       reactIcon,
@@ -108,6 +112,7 @@ const projects = [
   {
     title: 'Drum Machine',
     description: 'A grid based drum machine, using keyinputs via JavaScript of mouse input to play different drum sound samples.',
+    fullDescription: '',
     technologies: [
       nodeJSIcon,
       reactIcon,
@@ -120,6 +125,7 @@ const projects = [
   {
     title: 'Break Timer',
     description: 'Handy break timer, allowing for Pomodoro style work, with an alarm and adjustable timers.',
+    fullDescription: '',
     technologies: [
       html5Icon,
       javaScriptIcon,
@@ -144,6 +150,7 @@ const projects = [
   {
     title: 'JavaScript Calculator',
     description: 'JavaScript calculator capable of most basic calculations.',
+    fullDescription: '',
     technologies: [
       html5Icon,
       javaScriptIcon,
