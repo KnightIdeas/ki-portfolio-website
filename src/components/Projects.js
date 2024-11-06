@@ -59,7 +59,7 @@ const projects = [
   {
     title: 'Draught of The Dungeon',
     description: '"Apprentice, find thy master!" A potion throwing dungeon crawler/puzzle game.',
-    fullDescription: '',
+    fullDescription: 'Led a team to create Draught of the Dungeon, a 3D dungeon crawler, for my first Game Jam. Using Unity, Blender, and Krita, I built a custom 3D map maker, designed levels, modeled assets, hand-drew textures, and added shaders and effects. The game features 8 unique potions, a 2D UI by Fixel, and immersive audio by DLG. Despite time constraints, we completed a polished, engaging experience, showcasing my leadership, asset creation, and problem-solving skills under pressure.',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -73,7 +73,7 @@ const projects = [
   {
     title: 'Tountra - Cold Steel Vengence',
     description: 'MechJam IV entry Tountra, play as a brave freedom fighter on a frozen planet, featuring fully destructable buildings a weapon upgrade system and full 3D combat.',
-    fullDescription: '',
+    fullDescription: 'Led development of Tountra - Cold Steel Vengeance, a mech combat game, as an entry for Mech Jam IV 2023. Built in Unity with a team, I oversaw all Unity code and implemented tracked mech movement, destructible environments, and varied enemy AI. Collaborating closely with artists, I integrated 3D models from Blender and custom audio to enhance immersion. With engaging difficulty progression, explosive visuals, and strategic weapon upgrades, Tountra ranked #18 in Fun Factor on itch.io, earning positive player feedback.',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -86,7 +86,7 @@ const projects = [
   {
     title: 'Lex Finalis',
     description: 'An arcade space shooter, utilising endless runner techniques with three phases and an exciting boss encounter.',
-    fullDescription: '',
+    fullDescription: 'Lex Finalis, an endless-runner style game inspired by the classic Starfox SNES aesthetic, in Unity. Built to simulate forward movement by spawning 3D models that move toward the player, the game creates an immersive illusion of travel in a contained space. Features include full player control, laser shooting, missile lock-on, and three escalating difficulty levels, ending with a boss fight that combines enemy fighters and targeted attacks. Released on itch.io',
     technologies: [
       unityIcon,
       blenderIcon,
@@ -112,7 +112,7 @@ const projects = [
   {
     title: 'Drum Machine',
     description: 'A grid based drum machine, using keyinputs via JavaScript of mouse input to play different drum sound samples.',
-    fullDescription: '',
+    fullDescription: 'Built an interactive Drum Machine using React and CSS Grid, allowing users to trigger sounds via both keyboard presses and clicks. Each button activates unique audio from the FreeCodeCamp sound library, with the current sound name displayed on-screen. This project features a modular component structure, responsive design, and audio playback through useRef and useEffect hooks, providing a smooth and intuitive user experience.',
     technologies: [
       nodeJSIcon,
       reactIcon,
@@ -125,7 +125,7 @@ const projects = [
   {
     title: 'Break Timer',
     description: 'Handy break timer, allowing for Pomodoro style work, with an alarm and adjustable timers.',
-    fullDescription: '',
+    fullDescription: 'Developed a responsive Pomodoro-style Break Timer in JavaScript with a focus on mobile optimization. The timer enables users to set session and break durations, start/stop, and reset functions. Built using custom constructors, it seamlessly switches between work and break intervals, complete with audio alerts. This project showcases dynamic DOM manipulation and responsive design principles to create a functional, user-friendly experience.',
     technologies: [
       html5Icon,
       javaScriptIcon,
@@ -138,6 +138,7 @@ const projects = [
   {
     title: 'Simple Slot Machine',
     description: 'A JavaScript based slot machine that renders to a grid, place your bets!',
+    fullDescription: 'Developed a simple yet engaging Slot Machine game in JavaScript, HTML, and CSS. The game features randomized reels with symbols, a betting input, and balance tracking, providing a dynamic user experience. With every spin, players can win or lose based on matching symbols, with winnings updating their balance. This project highlights my skills in DOM manipulation, event handling, and responsive design to create an interactive, user-friendly interface.',
     technologies: [
       html5Icon,
       javaScriptIcon,
@@ -148,9 +149,9 @@ const projects = [
     link: 'https://knightideas.github.io/Slot_Machine/'
   },
   {
-    title: 'JavaScript Calculator',
-    description: 'JavaScript calculator capable of most basic calculations.',
-    fullDescription: '',
+    title: 'Easy To Use Calculator',
+    description: 'JavaScript calculator capable of most basic calculations with large easy to use buttons.',
+    fullDescription: 'Created a responsive, grid-based Calculator using JavaScript, HTML, and CSS. This project handles real-time calculations and supports basic arithmetic operations, decimal points, and clear functions. Designed with modular arrays for input and operators, it uses DOM manipulation to display results dynamically. The interface is optimized for both desktop and mobile, ensuring smooth usability. This project highlights event handling, error handling, and layout design.',
     technologies: [
       html5Icon,
       javaScriptIcon,
