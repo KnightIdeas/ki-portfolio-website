@@ -4,7 +4,7 @@ import logo from '../assets/images/Logo V1.png';
 import MissionStatement from './MissionStatement';
 import Services from './Services';
 import CallToAction from './CallToAction';
-import ProjectOverview from './ProjectOverview';
+import About from './About';
 // Font awesome import
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // Web dev icons
@@ -53,7 +53,16 @@ function Home() {
         imageArrayA={imageArrayA}
         imageArrayB={imageArrayB}
         />
-        
+        <About 
+        titleA='continuous self improvement'
+        blurbA1='My journey in technology started with a fascination for computers and IT, but everything changed when I discovered the world of game development. Driven by creativity and curiosity, I led two game jam teams, bringing ideas to life through code and collaborating with talented creators. This experience sparked a deeper passion for development and led me to pursue formal training and certifications in web development, including specialized skills in front-end libraries and JavaScript.'
+        blurbA2='I’m deeply committed to continuous learning, and I’m always excited to broaden my horizons. Recently, I’ve completed certifications in front-end development and JavaScript, and I’m now exploring TypeScript and Vue to add new layers to my skill set. Looking ahead, I plan to dive into backend development and AI, where I see exciting potential for growth and innovation. Beyond technology, I believe that self-development is holistic. I stay balanced and mentally sharp through daily walks, reading, and prioritizing my physical and mental well-being. For me, self-development is an ongoing journey, and I’m motivated to see where it takes me.'
+        imgUrl=''
+        imgAlt={''}
+        titleB='Inspiring future generations'
+        blurbB1='Helping others discover their potential in technology is one of the most rewarding parts of my career. I began by volunteering at my children’s local school, supporting students’ learning, which eventually led to my current role as a coding and robotics instructor. Today, I teach in multiple primary schools, introducing students to coding, robotics, and the thrill of building something from scratch. It’s incredibly fulfilling to see young learners light up when they understand a new concept or complete a project; my aim is to inspire them with the same passion for learning that has driven me.'
+        blurbB2='My dedication to nurturing a love for learning extends beyond the classroom. During the COVID-19 pandemic, I homeschooled my children, teaching my eldest coding and animation, while also focusing on physical activities with my youngest to support her well-being. This experience reinforced my belief in the power of personalized learning and the importance of adapting to each student’s needs. Whether it’s guiding students in class or fostering curiosity in my own children, I see every moment as a chance to help others grow and succeed.'
+        />
         {/* Additional content */}
         <MissionStatement />
         <Services />

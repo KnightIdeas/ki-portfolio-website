@@ -7,6 +7,10 @@ function Hero({ titleA, subtitleA, titleB, subtitleB, imgUrl, imgAlt, imageArray
 
     return (
         <section className="hero">
+            <div className="name-title">
+                <span><h1>Christopher Knight</h1></span>
+            </div>
+            <div className="hero-content-container">
             <div className="hero-content-A">
                 <h2>{titleA}</h2>
                 <h3>{subtitleA}</h3>
@@ -24,6 +28,8 @@ function Hero({ titleA, subtitleA, titleB, subtitleB, imgUrl, imgAlt, imageArray
                     {handleIconImages(imageArrayB)}
                 </div>
             </div>
+            </div>
+            
         </section>
     );
 }
