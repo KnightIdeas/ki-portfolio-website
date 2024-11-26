@@ -31,6 +31,7 @@ function Header() {
                 <Link to='/' className='nav-link'>Home</Link>
                 <Link to='/projects' className='nav-link'>Projects</Link>
                 <Link to='/' className='nav-link' onClick={handleContactClick}>Contact</Link>
+                <Link to='/current-project' className='nav-link'>Current Project</Link>
                 <a href={CurrentCV} className='nav-link' download>CV</a> {/* CV download link */}
             </nav>
 
@@ -40,6 +41,7 @@ function Header() {
                     <Link to='/' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
                     <Link to='/projects' className='nav-link' onClick={() => setIsMobileMenuOpen(false)}>Projects</Link>
                     <Link to='/contact' className='nav-link' onClick={handleContactClick}>Contact</Link>
+                    <Link to='/CurrentProject' className='nav-link'>Current Project</Link>
                     <a href={CurrentCV} className='nav-link' onClick={() => setIsMobileMenuOpen(false)} download>CV</a> {/* CV download for mobile */}
                 </nav>
             )}
