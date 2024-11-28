@@ -32,7 +32,9 @@ function CurrentProject () {
     
 
     // Method for adding images
-    gallery.push(new Image(TempImage,'image coming soon', 'temp image title'))
+    gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
+    gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
+    gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
     
     // Add images
 
@@ -55,7 +57,17 @@ function CurrentProject () {
                 <p></p>
             </section>
             <section className="milestones-container">
-                */ Insert the necessary functions here /*
+                {mileStones.map((milestone) => (
+                    <div
+                    key={milestone.id}
+                    className={`timeline-item ${milestone.completed ? `completed` : ``}`}>
+                    <div className='timeline-content'> {milestone.text}
+                        <span className='milestone-icon'>
+                            {milestone.completed ? '✔️' : '⏳'}
+                        </span>
+                    </div>
+                    </div>
+                ))}
                 <h3 className="estimation-text">
 
                 </h3>
