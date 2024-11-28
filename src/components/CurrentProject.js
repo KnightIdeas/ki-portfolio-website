@@ -1,14 +1,17 @@
 import { React, useState } from 'react';
 import TempImage from '../assets/images/ComingSoon-project-image.png'
 
+// Add the milestones to my Trello board and attach them dynamically.
+
 function CurrentProject () {
     
     // Constructors for updatable elements
     class MileStone {
-        constructor(id, text, completed) {
+        constructor(id, text, completed, estCompletionDate) {
             this.id = id;
             this.text = text;
             this.completed = completed;
+            this.estCompletionDate = estCompletionDate;
         }
     }
 
@@ -24,11 +27,12 @@ function CurrentProject () {
     const mileStones = [];
     const gallery = [];
 
-    // Method for updating milestones
+    // State management for milestone
+    const [completionDate, setCompletionDate] = ('');
     
 
     // Add milestones
-    mileStones.push(new MileStone(1, 'Fully respond to brief', false));
+    mileStones.push(new MileStone(1, 'Fully respond to brief', false, [1,11,2024]));
     
 
     // Method for adding images
@@ -36,7 +40,23 @@ function CurrentProject () {
     gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
     gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
     
-    // Add images
+    // Method for estimating deadline dates
+    // Check for the current date
+    function getDate() {
+    const currentDate = new Date();
+    const month = currentDate.getMonth() + 1;
+    const year = currentDate.getFullYear();
+    const date = currentDate.getDate();
+    return `${month}/${date}/${year}`;
+    }
+
+    // Check the current date against the specified completion date
+    function getEstimatedTBADate() {
+        mileStones.map((milestone) => {
+
+        })
+    }
+    // 
 
     // UI elements
     return (
