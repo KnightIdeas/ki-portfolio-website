@@ -82,7 +82,7 @@ function CurrentProject () {
             Current Project
             </h1>
             <div className="subtitle-container">
-            <h2 className="page-subtitle">
+            <h2 className="section-title">
             Page Subtitle
             </h2>
             </div>
@@ -92,6 +92,7 @@ function CurrentProject () {
                 <img />
             </section>
             <section className="milestones-container">
+                <h2 className='section-title'>Milestones</h2>
                 {mileStones.map((milestone) => (
                     <div
                     key={milestone.id}
@@ -108,6 +109,7 @@ function CurrentProject () {
                 </h3>
             </section>
             <section className="gallery-container">
+                <h2 className='section-title'>Gallery</h2>
                 {gallery.map((item, index) => (
                     <img 
                     key={index}
@@ -118,6 +120,7 @@ function CurrentProject () {
                 ))}
             </section>
             <section className='updates-container'>
+                <h2 className='section-title'>Updates</h2>
                 {updates.map((item, index) =>(
                 <div key={index}>
                 
