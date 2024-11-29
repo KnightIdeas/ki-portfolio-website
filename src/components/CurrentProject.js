@@ -23,23 +23,40 @@ function CurrentProject () {
         }
     }
 
+    class Update {
+        constructor(title, date, text, image) {
+            this.title = title;
+            this.date = date;
+            this.text = text;
+            this.image = image;
+        }
+    }
+
     // Arrays
     const mileStones = [];
     const gallery = [];
-
-    // State management for milestone
-    const [completionDate, setCompletionDate] = ('');
-    
+    const updates = [];
 
     // Add milestones
     mileStones.push(new MileStone(1, 'Fully respond to brief', false, [1,11,2024]));
-    
+
+    // format the date for the milestone
+    mileStones.forEach((milestone) => {
+        milestone.estCompletionDate = milestone.estCompletionDate.join('-');
+    });
 
     // Method for adding images
     gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
-    gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
-    gallery.push(new Image(TempImage,'image coming soon', 'temp image title'));
-    
+
+    // Method for adding updates
+    updates.push(new Update('This is an update',[1,11,2024],'This is update text',gallery[0]))
+    updates.push(new Update('This is an update',[1,11,2024],'This is update text',gallery[0]))
+
+    // Format the date for the updates
+    updates.forEach((update) => {
+        update.date = update.date.join('-');
+    });
+
     // Method for estimating deadline dates
     // Check for the current date
     function getDate() {
@@ -50,7 +67,7 @@ function CurrentProject () {
     return `${month}/${date}/${year}`;
     }
 
-    // Check the current date against the specified completion date
+    // Check the current date against the specified completion date, OPTIONAL
     function getEstimatedTBADate() {
         mileStones.map((milestone) => {
 
@@ -66,15 +83,13 @@ function CurrentProject () {
             </h1>
             <div className="subtitle-container">
             <h2 className="page-subtitle">
-
+            Page Subtitle
             </h2>
-            <h3 className="page-subtitle">
-
-            </h3>
             </div>
             <section className="overview-container">
-                <h3></h3>
-                <p></p>
+                <h3>Overview Title</h3>
+                <p>Overview Text</p>
+                <img />
             </section>
             <section className="milestones-container">
                 {mileStones.map((milestone) => (
@@ -83,7 +98,7 @@ function CurrentProject () {
                     className={`timeline-item ${milestone.completed ? `completed` : ``}`}>
                     <div className='timeline-content'> {milestone.text}
                         <span className='milestone-icon'>
-                            {milestone.completed ? '✔️' : '⏳'}
+                            {milestone.completed ? '✔️' : '⏳'}{milestone.estCompletionDate}
                         </span>
                     </div>
                     </div>
@@ -101,6 +116,18 @@ function CurrentProject () {
                     title={item.title}
                     />
                 ))}
+            </section>
+            <section className='updates-container'>
+                {updates.map((item, index) =>(
+                <div key={index}>
+                
+                <h3>
+                    {item.title}
+                </h3>
+                <p>{item.date}</p>
+                <p>{item.text}</p>
+                </div>
+                ))};
             </section>
         </div>
     )
