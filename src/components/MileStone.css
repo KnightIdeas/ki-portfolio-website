@@ -1,0 +1,66 @@
+.milestones-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.milestone-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: calc(25% - 20px);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 12px;
+    background-color: #ffe554;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item.completed {
+    background-color: #d4edda; /* Light green background for completed milestones */
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.milestone-icon {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.date-text {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+    .timeline-item {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-item {
+        flex-basis: 100%;
+    }
+}
