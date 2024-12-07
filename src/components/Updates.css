@@ -1,0 +1,185 @@
+/* src/components/Updates.css */
+
+/* Container for the updates section */
+.updates-container {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+    position: relative;
+}
+
+/* Section title */
+.updates-container .section-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Toggle button */
+.update-toggle-button {
+    display: block;
+    margin: 0 auto 2rem auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.update-toggle-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Update card container */
+.update-card {
+    max-height: 1000px; /* Arbitrary high value to accommodate content */
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+/* Collapsed state */
+.update-card.collapsed {
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Expanded state */
+.update-card.expanded {
+    max-height: 1000px;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Individual update items */
+.update-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.update-item:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Update title */
+.update-title {
+    font-size: 1.5rem;
+    color: #2e2e2e;
+    margin-bottom: 0.5rem;
+    font-weight: semi-bold;
+}
+
+/* Update date */
+.update-date {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 1rem;
+}
+
+/* Update text */
+.update-text {
+    font-size: 1rem;
+    color: #444444;
+    line-height: 1.6;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .updates-container {
+        padding: 1.5rem;
+    }
+
+    .updates-container .section-title {
+        font-size: 2rem;
+    }
+
+    .toggle-button {
+        padding: 0.65rem 1.3rem;
+        font-size: 0.95rem;
+    }
+
+    .update-item {
+        padding: 1.25rem;
+    }
+
+    .update-title {
+        font-size: 1.3rem;
+    }
+
+    .update-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 768px) {
+    .updates-container {
+        padding: 1rem;
+    }
+
+    .updates-container .section-title {
+        font-size: 1.75rem;
+    }
+
+    .update-toggle-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .update-item {
+        padding: 1rem;
+    }
+
+    .update-title {
+        font-size: 1.2rem;
+    }
+
+    .update-text {
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small screens (very small mobiles) */
+@media (max-width: 480px) {
+    .updates-container {
+        padding: 0.75rem;
+    }
+
+    .updates-container .section-title {
+        font-size: 1.5rem;
+    }
+
+    .update-toggle-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+
+    .update-item {
+        padding: 0.75rem;
+    }
+
+    .update-title {
+        font-size: 1.1rem;
+    }
+
+    .update-text {
+        font-size: 0.85rem;
+    }
+}

@@ -1,0 +1,181 @@
+/* src/components/CurrentProject.css */
+
+/* Container for the entire page */
+.page-container {
+    max-width: 1200px; /* Center the content and set a maximum width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 2rem; /* Padding around the container */
+    background-color: #ffffff; /* White background for a clean look */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Title of the page */
+.page-title {
+    font-size: 3rem; /* Large font size */
+    color: #2e2e2e; /* Dark grey color */
+    text-align: center; /* Centered text */
+    margin-bottom: 1rem; /* Space below the title */
+    font-weight: bold; /* Bold text */
+}
+
+.cover-image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem; /* Space below the cover image */
+}
+
+.cover-image {
+    max-width: 100%;
+    width: 90vw; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+/* Container for the subtitle */
+.subtitle-container {
+    text-align: center; /* Centered text */
+    margin-bottom: 2rem; /* Space below the subtitle */
+}
+
+/* Subtitle text */
+.section-title {
+    font-size: 1.5rem; /* Medium font size */
+    color: #555555; /* Medium grey color */
+    line-height: 1.6; /* Comfortable line height */
+    font-weight: semi-bold; /* Semi-bold text */
+}
+
+/* Overview section container */
+.overview-container {
+    margin-bottom: 3rem; /* Space below the overview section */
+}
+
+/* Headings within the overview */
+.overview-container h3 {
+    font-size: 2rem; /* Larger heading */
+    color: #333333; /* Darker grey for headings */
+    margin-bottom: 1rem; /* Space below the heading */
+    border-bottom: 2px solid #e0e0e0; /* Underline for emphasis */
+    padding-bottom: 0.5rem; /* Padding below the heading */
+}
+
+/* Paragraphs within the overview */
+.overview-container p {
+    font-size: 1rem; /* Standard font size */
+    color: #444444; /* Dark grey for text */
+    line-height: 1.8; /* Increased line height for readability */
+    margin-bottom: 1.5rem; /* Space below each paragraph */
+}
+
+/* Bold text within paragraphs */
+.overview-container p strong {
+    color: #2e2e2e; /* Darker color for emphasis */
+}
+
+/* Unordered lists within the overview */
+.overview-container ul {
+    list-style-type: disc; /* Disc bullets */
+    padding-left: 2rem; /* Indent the list */
+    margin-bottom: 1.5rem; /* Space below the list */
+}
+
+/* List items within the overview */
+.overview-container ul li {
+    font-size: 1rem; /* Standard font size */
+    color: #555555; /* Medium grey for list items */
+    line-height: 1.6; /* Comfortable line height */
+    margin-bottom: 0.75rem; /* Space below each list item */
+}
+
+/* Images within the overview */
+.overview-container img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 2rem; /* Space above the image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .page-container {
+        padding: 1.5rem; /* Reduced padding */
+    }
+
+    .page-title {
+        font-size: 2.5rem; /* Slightly smaller title */
+    }
+
+    .section-title {
+        font-size: 1.3rem; /* Slightly smaller subtitle */
+    }
+
+    .overview-container h3 {
+        font-size: 1.75rem; /* Smaller heading */
+    }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 768px) {
+    .page-container {
+        padding: 1rem; /* Further reduced padding */
+    }
+
+    .cover-image {
+        width: 70vw;
+    }
+
+    .page-title {
+        font-size: 2rem; /* Smaller title */
+    }
+
+    .section-title {
+        font-size: 1.2rem; /* Smaller subtitle */
+    }
+
+    .overview-container h3 {
+        font-size: 1.5rem; /* Smaller heading */
+    }
+
+    .overview-container p {
+        font-size: 0.95rem; /* Slightly smaller text */
+    }
+
+    .overview-container ul {
+        padding-left: 1.5rem; /* Reduced list indent */
+    }
+}
+
+/* Extra small screens (very small mobiles) */
+@media (max-width: 480px) {
+    .page-title {
+        font-size: 1.75rem; /* Even smaller title */
+    }
+
+    .section-title {
+        font-size: 1rem; /* Smaller subtitle */
+    }
+
+    .overview-container h3 {
+        font-size: 1.3rem; /* Smaller heading */
+    }
+
+    .overview-container p {
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    .overview-container ul {
+        padding-left: 1rem; /* Further reduced list indent */
+    }
+
+    .overview-container img {
+        margin-top: 1.5rem; /* Less space above image */
+    }
+}

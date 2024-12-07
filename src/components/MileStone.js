@@ -17,7 +17,7 @@ export default function MileStone() {
   const mileStones = [];
 
   // Add milestones
-  mileStones.push(new MileStone(0, "Precode Planning", false, [15, 12, 2024]));
+  mileStones.push(new MileStone(0, "Precode Planning", true, [15, 12, 2024]));
   mileStones.push(
     new MileStone(1, "Initial Base Code Setup", false, [31, 12, 2024])
   );
@@ -102,7 +102,7 @@ export default function MileStone() {
           className="toggle-button"
           onClick={() => setIsCollapsed(!isCollapsed)}
         >
-          {isCollapsed ? "Expand Milestones" : "Collapse Milestones"}
+          {isCollapsed ? "Expand" : "Collapse"}
         </button>
       </div>
       {!isCollapsed && (<div className="milestone-card">

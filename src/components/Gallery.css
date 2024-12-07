@@ -1,0 +1,164 @@
+/* src/components/Gallery.css */
+
+/* Container for the gallery section */
+.gallery-container {
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    max-width: 1200px;
+    margin: 0 auto 3rem auto;
+}
+
+/* Section title */
+.gallery-container .section-title {
+    text-align: center;
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Swiper container */
+.gallery-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual gallery item */
+.gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery images */
+.gallery-image {
+    width: 100%;
+    height: 80vh;
+    object-fit: contain;
+    display: block;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Gallery titles */
+.gallery-title {
+    padding: 1rem;
+    font-size: 1rem;
+    color: #444444;
+    text-align: center;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+    color: #007bff; /* Customize arrow color */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    color: #0056b3;
+}
+
+/* Swiper pagination dots */
+.swiper-pagination-bullet {
+    background: #007bff;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+    background: #0056b3;
+    opacity: 1;
+}
+
+/* Responsive Styles */
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .gallery-container {
+        padding: 1.5rem;
+    }
+
+    .gallery-container .section-title {
+        font-size: 2rem;
+    }
+
+    .gallery-image {
+        height: 250px;
+    }
+
+    .gallery-title {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Small screens (mobiles) */
+@media (max-width: 768px) {
+    .gallery-container {
+        padding: 1rem;
+    }
+
+    .gallery-container .section-title {
+        font-size: 1.75rem;
+    }
+
+    .gallery-image {
+        height: 200px;
+    }
+
+    .gallery-title {
+        font-size: 0.9rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Extra small screens (very small mobiles) */
+@media (max-width: 480px) {
+    .gallery-container {
+        padding: 0.75rem;
+    }
+
+    .gallery-container .section-title {
+        font-size: 1.5rem;
+    }
+
+    .gallery-image {
+        height: 150px;
+    }
+
+    .gallery-title {
+        font-size: 0.85rem;
+        padding: 0.4rem;
+    }
+}
+
+/* Lightbox Custom Styles (Optional) */
+/* Customize the lightbox appearance if needed */
+.yet-another-react-lightbox__wrapper {
+    /* Example: Adjust the background color */
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.yet-another-react-lightbox__container {
+    /* Example: Add padding */
+    padding: 1rem;
+}
+
+.yet-another-react-lightbox__slide img {
+    /* Example: Adjust image max width */
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+}
